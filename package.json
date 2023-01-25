@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
-    "dev": "nodemon --exec babel-node index.js",
+    "start": "node api.js && babel-node index.js",
+    "dev": "node api.js && nodemon --exec babel-node index.js",
     "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js"
   },
   "keywords": [],

@@ -73,8 +73,10 @@ const updateSingleArticle = async (req, res) => {
     if (req.body.description) {
       blog.description = req.body.description;
     }
-    if (req.body.image) {
-      const result = await cloudinary.uploader.upload(req.body.image);
+    if (req.files && req.files.image) {
+      const result = await cloudinary.uploader.upload(
+        req.files.image.tempFilePath
+      );
       blog.image.publicId = result.public_id;
       blog.image.url = result.secure_url;
     }
@@ -90,6 +92,7 @@ const updateSingleArticle = async (req, res) => {
       .json({ status: 'error', message: 'failed to update the blog' });
   }
 };
+
 //delete a blog
 const deleteSingleArticle = async (req, res) => {
   try {
@@ -149,12 +152,10 @@ const likess = async (req, res) => {
         _id: req.params.id,
         $push: { likes: like._id },
       });
-      return res
-        .status(200)
-        .json({
-          message: 'successfully liked',
-          likes: updateBlog.likes.length,
-        });
+      return res.status(200).json({
+        message: 'successfully liked',
+        likes: updateBlog.likes.length,
+      });
     }
   } catch (error) {
     return res.status(500).json({ message: 'server error' });

@@ -1,5 +1,8 @@
 node_modules
 package-lock.json
-.env
 .nyc_output
 dist
+temp_auto_push.bat
+temp_interactive_push.bat
+branch_structure.json
+config.bat

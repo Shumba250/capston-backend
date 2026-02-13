@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "Shumba250-patch-1",
+    "Shumba250-patch-2",
+    "Shumba250-patch-3",
+    "Shumba250-patch-4",
+    "Shumba250-patch-5",
+    "main",
+    "origin",
+    "snyk-upgrade-f131f4b9ca5c5c383dc5620c5a8c370f"
+  ],
+  "parent": {
+    "Shumba250-patch-1": "main",
+    "Shumba250-patch-2": "main",
+    "Shumba250-patch-3": "main",
+    "Shumba250-patch-4": "main",
+    "Shumba250-patch-5": "main",
+    "main": null,
+    "origin": "main",
+    "snyk-upgrade-f131f4b9ca5c5c383dc5620c5a8c370f": "main"
+  },
+  "order": [
+    "main",
+    "Shumba250-patch-1",
+    "Shumba250-patch-2",
+    "Shumba250-patch-3",
+    "Shumba250-patch-4",
+    "Shumba250-patch-5",
+    "origin",
+    "snyk-upgrade-f131f4b9ca5c5c383dc5620c5a8c370f"
+  ]
+}

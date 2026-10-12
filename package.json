@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "dev": "nodemon --exec babel-node index.js",
+    "start": "node api.js && babel-node index.js",
+    "dev": "node api.js && nodemon --exec babel-node index.js",
     "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js"
   },
   "keywords": [],
@@ -22,7 +22,7 @@
     "mongoose": "^6.8.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
-    "passport": "^0.6.0",
+    "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "swagger-jsdoc": "^6.2.8",
